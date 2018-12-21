@@ -1,0 +1,107 @@
+.footer {
+    color: #fff;
+    align-self: center;
+    position: absolute;
+    width: 100%;
+}
+
+.footer__about {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+}
+
+.footer__row {
+    display: flex;
+    width: 100%;
+    @include tablets() {
+        flex-wrap: wrap;
+    }
+    @include widephone() {
+        margin-top: -19px;
+    }
+}
+
+.footer__col {
+    border-right: 2px solid rgba(104, 113, 110, .2);
+    line-height: 20px;
+    background: #545a5c;
+    width: 35%;
+    @include tablets() {
+        width: 50%;
+    }
+    @include widephone() {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &:last-child {
+        border-right: 0px;
+        @include tablets() {
+            width: 100%;
+            padding-right: 25px;
+            padding-bottom: 27px;
+            padding-right: 40px;
+        }
+    }
+}
+
+.footer__container {
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 20px;
+    @include tablets() {
+        padding-left: 20px;
+    }
+    @include widephone() {
+        width: 67%;
+    }
+}
+
+.footer__desc {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    padding: 20px 20px;
+    @include widephone() {
+        width: 65%;
+        border-bottom: 1px solid;
+    }
+}
+
+.footer__content {
+    display: flex;
+    width: 100%;
+    @include widephone() {
+        flex-direction: column;
+    }
+}
+
+.footer__content {
+    background: #81aa70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    &--nocolor {
+        background: transparent;
+    }
+}
+
+.footer__text-citate {
+    font-family: "Roboto - Light Italic";
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, .5);
+}
+
+.footer__text-author {
+    font-family: "Roboto - Light Italic";
+    font-size: 16px;
+    font-weight: 700;
+}

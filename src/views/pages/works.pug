@@ -1,0 +1,65 @@
+extends ../main.layout.pug
+
+block variables
+    - var title = 'Мои работы'
+
+block content
+        include ../blocks/hero.pug
+
+        section.works#works
+            .triangle
+                .triangle__left.triangle__left_transparent
+            .triangle
+                .triangle__right.triangle__right_transparent                
+            .block-title.block-title-margin мои работы
+
+            .slider-container
+                #slider-component
+            
+        section.talks
+            .talks__container
+                .block-title.block-title-margin Что обо мне <br/>говорят
+                .talks__wrapper
+                    .talks__container-left 
+                        .talks__container__item
+                            img(src="./assets/images/talks/kovaldn.png", alt="").talks__item_logo
+                        .talks__container-text
+                            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только   самых тяжелых испытаний и бессонных ночей!  
+                        .talks__container__item-user
+                            .talks__item-text-author Ковальчук Дмитрий
+                            .talks__item-text-desc — основатель Loftschool
+                    .talks__container-right
+                        .talks__container__item
+                            img(src="./assets/images/talks/wowua.png", alt="").talks__item_logo
+                        .talks__container-text
+                            p Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах! 
+                        .talks__container__item-user
+                            .talks__item-text-author Сабанцев Владимир
+                            .talks__item-text-desc — преподаватель
+                .talks__form-container
+                    .talks__form
+                        form(id="form__order" v-on:submit="checkForm" method="post").talks__form__form
+                            .talks__form-container_inner                          
+                                .block-subtitle Связаться со мной
+                                label(for="name" class="talks__form-label")
+                                input(placeholder="Имя" id="name" name="name" v-model="name" required).talks__form-input 
+                                label(for="email" class="talks__form-label")
+                                input(placeholder="Email" id="email" name="email" v-model="email" required).talks__form-input 
+                                label(for="text" class="talks__form-label")
+                                textarea(id="text" name="text" placeholder="Ваше сообщение" v-model="text" required).talks__form__area
+                                .btn__container.talks__form-container_inner
+                                    ul.btn__list.btn__list-full-width
+                                        li.btn__item.btn__item-width
+                                            button(type="submit"  class="btn__nav-link btn__nav-link-transparent" v-on:click="submitForm") Отправить
+                                        li.btn__item.btn__item-width
+                                            button(type="reset" class="btn__nav-link btn__nav-link-transparent" v-on:click="resetForm") Очистить
+                .talks__arrow
+                    +icon('portf_arrow_down', 'arrow_up')
+
+
+
+            include ../blocks/footer__about.pug 
+        include ../blocks/fullscreen.pug
+
+block scripts
+    script(src='./assets/scripts/works.bundle.js')

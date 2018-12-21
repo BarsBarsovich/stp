@@ -1,0 +1,76 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне'; 
+
+block scripts
+  script(src='./assets/scripts/about.bundle.js')  
+  
+
+
+block content
+    include ../blocks/hero.pug
+
+    section.about#about
+      .about__left
+        .triangle
+          .triangle__left
+        .about__left-title
+          .block-title Обо мне
+        .about__left-content
+          .user-description
+            .user-description__image
+              +image('man.png','','user-description__avatar')
+            .user-description__data
+              .user-description__title
+                .block-subtitle Кто я
+              .user-description__text.text-content
+                p Я веб разработчик из Москвы. Мне 28 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+
+                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.    Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+      .about__right
+        .triangle
+          .triangle__right
+          //svg.triangle.triangle_fill_beige
+
+        .about__right-title
+          .block-subtitle.block-subtitle-margin-top Чем я могу быть<br/> вам полезен
+        .about__right-description.text-content.text-content-right
+          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .about__right-content
+          #skills-container
+    section.map
+      .google-map#map
+      .map__data
+        .contacts
+          h2.contacts__title
+            .block-subtitle Контакты
+          address.contacts__data
+            ul.contacts__list
+              -
+                var contacts = [
+                  ['skype', 'mr_ghost6'],
+                  ['phone', '911'],
+                  ['map_marker', 'skype_kdn'],
+                  ['envelope2', '1462155@mail.ru']
+                ]
+              each item in contacts
+                li.contacts__item.contacts-row
+                  .contacts-row.contacts__icon
+                    +icon(item[0], 'contacts__icon-img')
+                  .contacts-row.contacts__info #{item[1]}
+    include ../blocks/fullscreen.pug
+      include ../blocks/footer__about.pug
+
+
+    script.
+      ymaps.ready(init);
+      function init(){
+            var myMap = new ymaps.Map("map", {
+              center: [59.94, 30.32],
+              zoom: 12,
+              controls: ['zoomControl'],
+              behaviors: ['drag']
+          });
+
+      }

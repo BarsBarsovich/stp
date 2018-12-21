@@ -1,0 +1,15 @@
+.map {
+    // background: url("../images/map.bg.png") center center /cover no-repeat;
+    // height: 100%;
+    position: relative;
+    padding-bottom: 120px;
+    height: 100%;
+}
+
+.map__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}

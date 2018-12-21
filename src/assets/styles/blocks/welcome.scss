@@ -1,0 +1,36 @@
+.card {
+    height: 100%;
+}
+
+.card__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+    perspective: 1000px;
+}
+
+.card__container {
+    width: 380px;
+    // min-height: 426px;
+    background-color: rgba(18, 38, 32, 0.6);
+    // opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn__list-padding {
+    padding-top: 20px;
+}

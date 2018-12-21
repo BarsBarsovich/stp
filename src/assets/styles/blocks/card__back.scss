@@ -1,0 +1,144 @@
+.card__back {
+    position: absolute;
+    transform: rotateY(180deg);
+}
+
+.card__front--active {
+    // display: none;
+    position: absolute;
+    transform: rotateY(180deg)
+}
+
+.card__back--active {
+    transform: rotateY(360deg);
+    display: flex;
+}
+
+.card__back,
+.card__front {
+    transition: 1s;
+    backface-visibility: hidden;
+}
+
+.card__back-input {
+    width: 340px;
+    height: 45px;
+    border-radius: 25px;
+    color: #373e42;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 60px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.card__back-login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    position: relative;
+}
+
+.card__back-input-logo-user {
+    left: 20px;
+    position: absolute;
+    top: 0;
+}
+
+.card__back-input-logo-pass {
+    left: 19px;
+    position: absolute;
+    top: 65px;
+}
+
+.card__back-label {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.card__back-checkbox-container {
+    align-self: center;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.card__back-checkbox {
+    visibility: hidden;
+    &:checked+label:before {
+        background: #639155;
+        color: #fff;
+        content: "\2713";
+        text-align: center;
+    }
+}
+
+.card__back-label_checkbox {
+    cursor: pointer;
+    &:before {
+        border: 1px solid #639155;
+        content: "\00a0";
+        display: inline-block;
+        font: 16px/1em sans-serif;
+        height: 16px;
+        margin: 0 .25em 0 0;
+        padding: 0;
+        vertical-align: top;
+        width: 16px;
+    }
+}
+
+.card__back-radio {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 60px;
+}
+
+.card__back-container {
+    margin-top: 25px;
+}
+
+.card__back-title {
+    margin-left: 32%;
+}
+
+.card__back-title {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+.card__back_radio_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 39px;
+    margin-top: 16px;
+}
+
+.card__back-radio-control {
+    margin-right: 10px;
+}
+
+.label {
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card__back-label-container {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,111 @@
+.about {
+    display: flex;
+    position: relative;
+    @include tablets() {
+        flex-direction: column;
+    }
+}
+
+.about__left {
+    width: 50%;
+    background: #ebefe2;
+    @include tablets() {
+        width: 100%;
+    }
+}
+
+.about__right {
+    width: 50%;
+    background: #f4f5f0;
+    @include tablets() {
+        width: 100%;
+    }
+}
+
+.block-title {
+    font-family: "SansusWebissimo";
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 66px;
+    text-transform: uppercase;
+    letter-spacing: 1.57px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: url("../images/about-header.png") center -36px/contain no-repeat;
+    height: 125px;
+    position: relative;
+    text-align: center;
+    &:after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        right: 8px;
+        top: 86%;
+        transform: translateX(-50%);
+        width: 89px;
+    }
+}
+
+.block-title-margin {
+    margin-top: 70px;
+    padding-bottom: 10px;
+}
+
+.block-subtitle {
+    color: #566358;
+    font-family: "SansusWebissimo";
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 41.01px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    //margin-top: 49px;
+    position: relative;
+    &:after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        right: 8px;
+        top: 117%;
+        transform: translateX(-50%);
+        width: 89px;
+    }
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.block-subtitle-margin-top {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.block-subtitle-auth {
+    color: #fff;
+    margin-top: 34px;
+}
+
+.text-content {
+    color: #566358;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24.01px;
+    margin-top: 31px;
+    margin-left: 80px;
+    width: 66%;
+    padding-bottom: 20px;
+}
+
+.text-content-right {
+    width: 100%;
+    margin-left: 40px;
+    width: 81%;
+}

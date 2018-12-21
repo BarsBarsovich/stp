@@ -1,0 +1,27 @@
+section.hero
+      -
+        var socials = [
+          ['vk', 'http://vk.com'],
+          ['github', 'http://gh.com'],
+          ['linkedin', 'http://in.com']
+        ]
+      .hero__links
+        ul.socials
+          each item in socials
+            li.socials__item
+              a(href=item[1]).socials__link
+                +icon(item[0], 'social__svg social__svg-white')
+        .hero__menu
+          include hamburger.pug
+
+
+        .hero__title
+          .section-title
+            .user
+              .user__pic
+                img.user__pic-image(src="./assets/images/avatar.png")
+              .user__description
+                .user__name Борис Дрябин
+                .user__info Личный сайт веб разработчика
+        a(href="#").down-btn.hero__down-btns
+           +icon('portf_arrow_down','arrow_down')

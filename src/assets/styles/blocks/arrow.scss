@@ -1,0 +1,44 @@
+.arrow_up {
+    width: 26px;
+    height: 16px;
+    fill: #c6c6c4;
+    transform: rotate(-180deg);
+    cursor: pointer;
+}
+
+.arrow_down {
+    width: 26px;
+    height: 16px;
+    fill: #c6c6c4;
+    cursor: pointer;
+}
+
+.arrow__slider {
+    fill: #fff;
+    width: 43px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.arrow__slider-left {
+    position: absolute;
+    left: 42%;
+    top: 45%;
+    cursor: pointer;
+    @include tablets() {
+        left: 45%;
+        top: 50%;
+    }
+}
+
+.arrow__slider-right {
+    position: absolute;
+    top: 45%;
+    right: 41%;
+    transform: rotate(180deg);
+    cursor: pointer;
+    @include tablets() {
+        right: 40%;
+        top: 50%;
+    }
+}

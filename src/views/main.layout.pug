@@ -1,0 +1,29 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    
+    title Portfolio | #{title}
+    link(rel='stylesheet' href='./assets/styles/main.min.css')
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/three.min.js"></script>
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+  body
+    .wrapper
+      include ./blocks/preloader.pug
+      .maincontent
+        block content
+
+      //- include ./common/footer.pug
+    include ./components/entry.pug
+
+
+
+    script(src='./assets/scripts/bootloader.bundle.js')
+    script(src='./assets/scripts/vendor.bundle.js')
+    block scripts

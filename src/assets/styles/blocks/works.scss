@@ -1,0 +1,83 @@
+.works {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    padding-top:120px;
+}
+
+.works__title {
+    font-family: "SansusWebissimo";
+    font-size: 63px;
+    font-weight: 400;
+    line-height: 66px;
+    text-transform: uppercase;
+    letter-spacing: 1.57px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: url("../images/works-header.png") center -36px/contain no-repeat;
+    height: 125px;
+    position: relative;
+    &:after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        right: 8px;
+        top: 86%;
+        transform: translateX(-50%);
+        width: 89px;
+    }
+}
+
+.works__container {
+    display: flex;
+    width: 100%;
+    // grid-template: "works__left-container slider__img-container" 70% "works__left-container slider__arrows" 30% / 1fr 1fr;
+}
+
+.works__left {
+    width: 50%;
+    background: #ebefe2;
+}
+
+.works__left-title {
+    margin-top: 26px;
+    color: #4e8839;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.works__right {
+    width: 50%;
+    background: #e1e4d7;
+}
+
+.works__left__btn {
+    position: relative;
+}
+
+.works__left__btn-button {
+    margin-top: 16px;
+    width: 201px;
+    height: 45px;
+    background-color: #6c9c5a;
+    border-radius: 25px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.works__left__btn-icon {
+    position: absolute;
+    top: 47%;
+    left: 6%;
+}

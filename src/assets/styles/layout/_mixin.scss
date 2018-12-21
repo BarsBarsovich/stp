@@ -1,0 +1,25 @@
+// @function rem($px) {
+//     @return $px / 16px+0rem;
+// }
+@mixin blog__title($path) {
+    background: url($imgPath) 50%/contain no-repeat;
+    width: 100%;
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin widephone {
+    @media screen and (max-width: $widePhones) {
+        @content;
+    }
+}
